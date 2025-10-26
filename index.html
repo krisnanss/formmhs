@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form Pendaftaran Mahasiswa Baru (PMB)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= FORM PENDAFTARAN ======= -->
+  <div class="form-card" id="formCard">
+    <div class="form-header">
+      <h1>📝 Formulir Pendaftaran Mahasiswa Baru</h1>
+      <p class="subtitle">
+        Silahkan lengkapi data berikut dengan benar untuk proses penerimaan mahasiswa baru.
+      </p>
+    </div>
+
+    <!-- Form dimulai di sini -->
+    <form id="pmbForm" action="#" method="post" enctype="multipart/form-data">
+      <!-- ====== 1. Data Pribadi ====== -->
+      <h2>Data Pribadi</h2>
+       
+      <label for="nama">Nama Lengkap *</label>
+      <input type="text" id="nama" name="Nama Lengkap" placeholder="Nama sesuai KTP" required>
+
+      <label for="nik">NIK / No. KTP *</label>
+      <input type="text" id="nik" name="NIK" placeholder="16 digit NIK" maxlength="16" required>
+
+      <label for="jk">Jenis Kelamin *</label>
+      <select id="jk" name="Jenis Kelamin" required>
+        <option value="" disabled selected>Pilih jenis kelamin</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label for="tempat">Tempat Lahir *</label>
+      <input type="text" id="tempat" name="Tempat Lahir" placeholder="Contoh: Jakarta" required>
+
+      <label for="tgl">Tanggal Lahir *</label>
+      <input type="date" id="tgl" name="Tanggal Lahir" required>
+
+      <label for="agama">Agama *</label>
+      <select id="agama" name="Agama" required>
+        <option value="" disabled selected>Pilih agama</option>
+        <option>Islam</option>
+        <option>Kristen</option>
+        <option>Katolik</option>
+        <option>Hindu</option>
+        <option>Buddha</option>
+        <option>Konghucu</option>
+      </select>
+
+      <label for="warga">Kewarganegaraan *</label>
+      <input type="text" id="warga" name="Kewarganegaraan" placeholder="Contoh: Indonesia" required>
+
+      <label for="alamat">Alamat Domisili *</label>
+      <textarea id="alamat" name="Alamat Domisili" rows="3" placeholder="Nama jalan, RT/RW, Kelurahan, Kecamatan" required></textarea>
+
+      <label for="hp">No. HP *</label>
+      <input type="tel" id="hp" name="Nomor HP" placeholder="08xxxxxxxxxx" required>
+
+      <label for="email">Email Aktif *</label>
+      <input type="email" id="email" name="Email" placeholder="nama@email.com" required>
+
+      <label for="foto">Pas Foto (JPG/PNG)</label>
+      <input type="file" id="foto" name="Pas Foto" accept=".jpg,.jpeg,.png">
+
+
+      <!-- ====== 2. Data Akademik ====== -->
+      <h2>Data Akademik</h2>
+
+      <label for="sekolah">Asal Sekolah *</label>
+      <input type="text" id="sekolah" name="Asal Sekolah" placeholder="SMA/SMK/MA" required>
+
+      <label for="jurusan">Jurusan</label>
+      <input type="text" id="jurusan" name="Jurusan" placeholder="Contoh: IPA / IPS / TKJ">
+
+      <label for="tahun">Tahun Lulus *</label>
+      <input type="number" id="tahun" name="Tahun Lulus" placeholder="Contoh: 2025" required>
+
+      <label for="nilai">Nilai Rata-rata</label>
+      <input type="text" id="nilai" name="Nilai Rata-rata" placeholder="Contoh: 85.50">
+
+
+      <!-- ====== 3. Program Studi ====== -->
+      <h2>Program Studi yang Dipilih</h2>
+
+      <label for="jalur">Jalur Pendaftaran *</label>
+      <select id="jalur" name="Jalur Pendaftaran" required>
+        <option value="" disabled selected>Pilih jalur</option>
+        <option>Reguler</option>
+        <option>Prestasi</option>
+        <option>Beasiswa</option>
+        <option>Mandiri</option>
+      </select>
+
+      <label for="prodi1">Pilihan Program Studi 1 *</label>
+      <select id="prodi1" name="Program Studi 1" required>
+        <option value="" disabled selected>Pilih program studi</option>
+        <option>Teknik Informatika</option>
+        <option>Sistem Informasi</option>
+        <option>Manajemen</option>
+        <option>Akuntansi</option>
+        <option>Desain Komunikasi Visual</option>
+      </select>
+
+      <label for="prodi2">Pilihan Program Studi 2</label>
+      <select id="prodi2" name="Program Studi 2">
+        <option value="" disabled selected>Pilih program studi</option>
+        <option>Teknik Informatika</option>
+        <option>Sistem Informasi</option>
+        <option>Manajemen</option>
+        <option>Akuntansi</option>
+        <option>Desain Komunikasi Visual</option>
+      </select>
+
+
+      <!-- ====== 4. Data Orang Tua / Wali ====== -->
+      <h2>Data Orang Tua / Wali</h2>
+
+      <label for="ayah">Nama Ayah *</label>
+      <input type="text" id="ayah" name="Nama Ayah" required>
+
+      <label for="ibu">Nama Ibu *</label>
+      <input type="text" id="ibu" name="Nama Ibu" required>
+
+      <label for="pk_ayah">Pekerjaan Ayah</label>
+      <input type="text" id="pk_ayah" name="Pekerjaan Ayah">
+
+      <label for="pk_ibu">Pekerjaan Ibu</label>
+      <input type="text" id="pk_ibu" name="Pekerjaan Ibu">
+
+      <label for="penghasilan">Penghasilan Orang Tua</label>
+      <select id="penghasilan" name="Penghasilan Orang Tua">
+        <option value="" disabled selected>Pilih rentang</option>
+        <option>< Rp 2.000.000</option>
+        <option>Rp 2.000.000 - Rp 5.000.000</option>
+        <option>Rp 5.000.000 - Rp 10.000.000</option>
+        <option>> Rp 10.000.000</option>
+      </select>
+
+      <label for="kontak_ortu">Kontak Orang Tua / Wali</label>
+      <input type="tel" id="kontak_ortu" name="Kontak Orang Tua" placeholder="08xxxxxxxxxx">
+
+
+      <!-- ====== 5. Data Pembayaran ====== -->
+      <h2>Data Pembayaran</h2>
+
+      <label for="bukti">No. Bukti Transfer</label>
+      <input type="text" id="bukti" name="No. Bukti Transfer" placeholder="Nomor referensi pembayaran">
+
+      <label for="tgl_bayar">Tanggal Pembayaran</label>
+      <input type="date" id="tgl_bayar" name="Tanggal Pembayaran">
+
+      <label for="bank">Bank Pengirim</label>
+      <input type="text" id="bank" name="Bank Pengirim" placeholder="Contoh: BRI / BCA / Mandiri">
+
+
+      <!-- ====== 6. Lampiran Berkas ====== -->
+      <h2>Lampiran Berkas</h2>
+
+      <label for="ktp">Scan KTP / Kartu Pelajar</label>
+      <input type="file" id="ktp" name="Scan KTP / Kartu Pelajar" accept=".jpg,.jpeg,.png,.pdf">
+
+      <label for="ijazah">Scan Ijazah / SKL</label>
+      <input type="file" id="ijazah" name="Scan Ijazah / SKL" accept=".jpg,.jpeg,.png,.pdf">
+
+      <label for="rapor">Scan Nilai Rapor / Transkrip</label>
+      <input type="file" id="rapor" name="Scan Nilai Rapor / Transkrip" accept=".jpg,.jpeg,.png,.pdf">
+
+      <label for="bukti_bayar">Bukti Pembayaran Pendaftaran</label>
+      <input type="file" id="bukti_bayar" name="Bukti Pembayaran" accept=".jpg,.jpeg,.png,.pdf">
+
+      <button type="submit">Kirim Formulir</button>
+    </form>
+  </div>
+
+  <!-- ======= HASIL PENDAFTAR ======= -->
+  <div class="result-card" id="resultCard" style="display:none;">
+  <h2>Data Pendaftar Terkirim!</h2>
+  <p class="subtext">Berikut adalah data yang telah Anda isi:</p>
+
+    <div id="resultContent" class="result-content"></div>
+
+    <button id="backBtn">Kembali ke Form</button>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="y"></span> PMB — Formulir Mahasiswa Baru</p>
+  </footer>
+
+  <!-- ✅ JavaScript di sini -->
+  <script src="script.js"></script>
+</body>
+</html>
